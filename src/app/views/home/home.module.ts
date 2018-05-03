@@ -20,7 +20,6 @@ import { CommonDirectivesModule } from '../../directives/common/common-directive
 import { HomeRoutes } from './home.routing';
 import { HeaderComponent } from './header/header.component';
 import { IntroOneComponent } from './intro-one/intro-one.component';
-import { IntroTwoComponent } from './intro-two/intro-two.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ServicesComponent } from './services/services.component';
 import { CtaComponent } from './cta/cta.component';
