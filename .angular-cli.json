@@ -19,9 +19,16 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "../node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.css",
+        "vendor/pace/pace-theme-min.css",
+        "assets/styles/themes/indigo.scss",
+        "assets/styles/styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "vendor/pace/pace.min.js",
+        "../node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.js",
+        "../node_modules/hammerjs/hammer.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

@@ -12,3 +12,5 @@ describe('ishulidev App', () => {
     expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });
+
+
