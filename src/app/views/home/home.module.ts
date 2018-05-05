@@ -12,6 +12,7 @@ import {
   MatInputModule,
   MatRippleModule,
   MatSlideToggleModule,
+  MatDialogModule,
   MatSnackBarModule
  } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -32,7 +33,9 @@ import { TestimonialsCarouselComponent } from './testimonials-carousel/testimoni
 import { ServicesCarouselComponent } from './services-carousel/services-carousel.component';
 import { WINDOW_PROVIDERS } from '../../helpers/window.helper';
 import { HomeComponent } from './home.component';
-
+import { ServiceDetailComponent } from './service-detail/service-detail.component';
+import { ServiceSummaryComponent } from './service-summary/service-summary.component';
+import { TruncateModule } from 'ng2-truncate';
 
 @NgModule({
   imports: [
@@ -52,7 +55,13 @@ import { HomeComponent } from './home.component';
     FlexLayoutModule,
     NguCarouselModule,
     CommonDirectivesModule,
+    MatDialogModule,
+    TruncateModule,
     RouterModule.forChild(HomeRoutes)
+  ],
+
+  entryComponents: [
+    ServiceDetailComponent
   ],
   declarations: [
     HomeComponent,
@@ -67,7 +76,9 @@ import { HomeComponent } from './home.component';
     TestimonialsComponent,
     PortfolioCarouselComponent,
     TestimonialsCarouselComponent,
-    ServicesCarouselComponent
+    ServicesCarouselComponent,
+    ServiceDetailComponent,
+    ServiceSummaryComponent
   ],
   providers: [WINDOW_PROVIDERS]
 
