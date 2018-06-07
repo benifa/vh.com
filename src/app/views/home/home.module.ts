@@ -36,6 +36,8 @@ import { HomeComponent } from './home.component';
 import { ServiceDetailComponent } from './service-detail/service-detail.component';
 import { ServiceSummaryComponent } from './service-summary/service-summary.component';
 import { TruncateModule } from 'ng2-truncate';
+import { AboutComponent } from './about/about.component';
+import { StrategyComponent } from './strategy/strategy.component';
 
 @NgModule({
   imports: [
@@ -78,7 +80,9 @@ import { TruncateModule } from 'ng2-truncate';
     TestimonialsCarouselComponent,
     ServicesCarouselComponent,
     ServiceDetailComponent,
-    ServiceSummaryComponent
+    ServiceSummaryComponent,
+    AboutComponent,
+    StrategyComponent
   ],
   providers: [WINDOW_PROVIDERS]
 

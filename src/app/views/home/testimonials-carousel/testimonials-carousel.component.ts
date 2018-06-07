@@ -9,34 +9,53 @@ import { NguCarousel } from '@ngu/carousel';
 export class TestimonialsCarouselComponent implements OnInit {
   @Input('backgroundGray') public backgroundGray;
   public carouselOptions: NguCarousel;
-  public testimonials = [{
+  public testimonials = [
+    {
+      logo: 'assets/images/mock-logo-4.png',
+      photo: 'assets/images/face-1.jpg',
+      text: `“I’ve tried using different softwares. The computer is not my strong side.
+      There is excellent support behind DevEgret and people to walk you through it.
+      If you have any questions they’ll go over that and explain to you how to do that. ”`,
+      title: 'Christian Kabanda',
+      subtitle: 'Product Manager'
+    },
+    {
+      logo: 'assets/images/mock-logo-4.png',
+      photo: 'assets/images/face-1.jpg',
+      text: `“I’ve tried using different softwares. The computer is not my strong side.
+      There is excellent support behind DevEgret and people to walk you through it.
+      If you have any questions they’ll go over that and explain to you how to do that. ”`,
+      title: 'Olivier Iyakaremye',
+      subtitle: 'Product Manager'
+    },
+    {
     logo: 'assets/images/mock-logo-4.png',
     photo: 'assets/images/face-1.jpg',
-    text: `“I’ve tried using different softwares. The computer is not my strong side. 
-    There is excellent support behind DevEgret and people to walk you through it. 
+    text: `“I’ve tried using different softwares. The computer is not my strong side.
+    There is excellent support behind DevEgret and people to walk you through it.
     If you have any questions they’ll go over that and explain to you how to do that. ”`,
-    title: 'Jhone Doe',
+    title: 'Fabrice BENIMANA',
     subtitle: 'Product Manager'
   }, {
     logo: 'assets/images/mock-logo-2.png',
     photo: 'assets/images/face-2.jpg',
     text: `"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit modi voluptas vero iusto fuga quos totam eius,
     atis magnam tempora doloribus ducimus dolorem culpa animi beatae tenetur! Sapiente, quia tempora."`,
-    title: 'Adam Smith',
+    title: 'Marius Kabera',
     subtitle: 'CEO'
   }, {
     logo: 'assets/images/mock-logo-3.png',
     photo: 'assets/images/face-3.jpg',
     text: `"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit modi voluptas vero iusto fuga quos totam eius,
     atis magnam tempora doloribus ducimus dolorem culpa animi beatae tenetur! Sapiente, quia tempora."`,
-    title: 'Jhone White',
+    title: 'Desire Aheza',
     subtitle: 'Software Engineer'
   }, {
     logo: 'assets/images/mock-logo-1.png',
     photo: 'assets/images/face-4.jpg',
     text: `"Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit modi voluptas vero iusto fuga quos totam eius,
     atis magnam tempora doloribus ducimus dolorem culpa animi beatae tenetur! Sapiente, quia tempora."`,
-    title: 'Jessica Hiche',
+    title: 'Wellars Muhoza',
     subtitle: 'CEO'
   }]
   constructor() { }
