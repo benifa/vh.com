@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -8,16 +8,20 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   @Input('backgroundGray') public backgroundGray;
   contactForm: FormGroup;
+  name = new FormControl('', [Validators.required])
+  email = new FormControl('', [Validators.email])
+  subject = new FormControl('', [Validators.required])
+  message = new FormControl('', Validators.required)
   constructor(
     private fb: FormBuilder
   ) { }
 
   ngOnInit() {
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required]],
-      email: ['', [Validators.email]],
-      subject: ['', [Validators.required]],
-      message: ['', Validators.required]
+      name: this.name,
+      email: this.email,
+      subject: this.subject,
+      message: this.message
     })
   }
 

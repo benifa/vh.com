@@ -1,7 +1,7 @@
-import { Routes } from '@angular/router';
-import { HomeComponent } from './views/home/home.component';
+import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
 
-export const rootRouterConfig: Routes = [
+const appRoutes: Routes = [
   {
     path: '',
     redirectTo: 'home',
@@ -10,6 +10,18 @@ export const rootRouterConfig: Routes = [
   {
     path: 'home',
     loadChildren: './views/home/home.module#HomeModule'
+  },
+  {
+    path: 'login',
+    loadChildren: './views/login/login.module#LoginModule'
   }
 ];
 
+@NgModule({
+  imports: [RouterModule.forRoot(appRoutes, {useHash: false, preloadingStrategy: PreloadAllModules})],
+  exports: [RouterModule]
+
+})
+
+export class AppRoutingModule {
+}
