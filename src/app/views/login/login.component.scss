@@ -218,16 +218,13 @@ input, textarea, select, button, meter, progress {
 
 
 .emqwUJ {
+  background: transparent;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   color: #00bfff;
   border-width: 0px;
-  border-style: initial;
-  border-color: initial;
-  border-image: initial;
-  padding: 0px;
-  background: rgb(255, 255, 255);
+
 }
 
 :focus {outline:0 !important;}

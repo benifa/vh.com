@@ -755,3 +755,7 @@ body .mat-select-trigger {
       font-size: 100px;
   }
 }
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #00bfff !important;
+}

@@ -1,5 +1,6 @@
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
+import {AppLoaderComponent} from './services/app-loader/app-loader.component';
 
 const appRoutes: Routes = [
   {
