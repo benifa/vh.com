@@ -1,6 +1,5 @@
-import {Component, HostListener, Inject, OnInit} from '@angular/core';
-import {DOCUMENT} from '@angular/platform-browser';
-import {WINDOW} from '../../../helpers/window.helper';
+import {Component, OnInit} from '@angular/core';
+import {AuthService} from '../auth.service';
 
 @Component({
   selector: 'app-member',
@@ -8,24 +7,25 @@ import {WINDOW} from '../../../helpers/window.helper';
   styleUrls: ['./member.component.scss']
 })
 export class MemberComponent implements OnInit {
-  isFixed;
 
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    @Inject(WINDOW) private window: Window
-  ) { }
+  constructor(public authService: AuthService) {
+  }
 
   ngOnInit() {
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-    const offset = this.window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop || 0;
-    if (offset > 10) {
-      this.isFixed = true
+
+  getGreeting() {
+    const curHr = new Date().getHours()
+
+    if (curHr < 12) {
+      return 'Good morning'
+    } else if (curHr < 18) {
+      return 'Good afternoon'
     } else {
-      this.isFixed = false;
+      return 'Good evening'
     }
   }
+
 
 }

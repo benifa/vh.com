@@ -1,0 +1,243 @@
+.ksYAkO {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  z-index: 0;
+  overflow: hidden;
+  background: rgb(245, 245, 245);
+  padding: 20px;
+}
+
+.jSsssp {
+  display: flex;
+  width: 100%;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: rgb(154, 159, 160);
+  margin-top: 4px;
+}
+
+.dLQUau {
+  margin-bottom: 1em;
+}
+
+.butn:enabled {
+  background-color: #00bfff;
+}
+
+.cFAhLb {
+  display: flex;
+  position: absolute;
+  top: 30px;
+  right: 10px;
+  height: 35%;
+  width: 50px;
+  font-size: 12px;
+  color: rgb(54, 63, 65);
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  user-select: none;
+  cursor: pointer;
+  padding: 0px 8px;
+  transition: all 300ms ease 0s;
+}
+
+.lgnForm {
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 2px 0px;
+  background: rgb(255, 255, 255);
+  border-radius: 4px;
+  max-width: 600px;
+  position: relative;
+  padding: 40px 50px;
+}
+
+.fMwXMM {
+  display: block;
+  user-select: none;
+  position: relative;
+  padding-bottom: 30px;
+  transition: opacity 150ms ease-in-out 0s;
+}
+
+.fskrn {
+  width: 100%;
+}
+
+.hlf {
+  width: 40%;
+}
+
+.jVsaXV {
+  text-align: center;
+}
+
+.kWQCKm {
+  height: 44px;
+  font-size: 14px;
+  color: rgb(54, 63, 65);
+  min-width: 44px;
+  overflow: visible;
+  border-image: initial;
+  border-style: solid;
+  line-height: 1.5;
+  border-width: 1px;
+  border-color: rgb(204, 207, 207);
+
+  padding: 0px 0px 0px 6px;
+  border-radius: 10px;
+  transition: border-color 250ms ease-in-out 0s;
+  text-size-adjust: 100%;
+}
+
+.butn {
+  height: 44px;
+  font-size: 14px;
+  min-width: 44px;
+  overflow: visible;
+  border-image: initial;
+
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  user-select: none;
+  box-shadow: none;
+  text-transform: none;
+
+  letter-spacing: normal;
+
+  font-weight: 600;
+  position: relative;
+  transition: all 100ms ease-in-out 0s;
+  border-width: initial;
+  border-style: none;
+
+  padding: 0px 24px;
+  border-radius: 100px;
+  color: white;
+}
+
+input, textarea, select, button {
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  font: 400 11px system-ui;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: "Avenir Next Web", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.fMwXMM {
+  user-select: none;
+
+}
+
+input {
+  background-color: white;
+  -webkit-rtl-ordering: logical;
+  cursor: text;
+}
+
+label {
+  cursor: default;
+}
+
+div {
+  display: block;
+}
+
+.dLQUau {
+  margin-bottom: 1em;
+}
+
+button, input {
+  overflow: visible;
+  margin: 0px;
+}
+
+input[type="password" i] {
+  -webkit-text-security: disc !important;
+}
+
+.form {
+  display: block;
+  margin-top: 0em;
+}
+
+.kpxKWl {
+  position: relative;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: "Avenir Next Web", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+.fadexB {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.57;
+  color: rgb(54, 63, 65);
+  margin-bottom: 8px;
+}
+
+.cwWfia {
+  text-align: center;
+}
+
+.butn:disabled {
+  cursor: default;
+  background: rgb(204, 207, 207);
+  border-color: transparent;
+}
+
+input, textarea, select, button, meter, progress {
+  -webkit-writing-mode: horizontal-tb !important;
+}
+
+.emqwUJ {
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #00bfff;
+  border-width: 0px;
+
+}
+
+:focus {
+  outline: 0 !important;
+}
+
+.flex-grid-thirds {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-grid-halves {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-grid-halves .col {
+  width: 40%;
+}
+
+

@@ -1,0 +1,9 @@
+<mat-card class="file">
+
+  <mat-card-header>
+
+    <div class="sc-kqlzXE eVTkjb"><div class="sc-hcnlBt iHjEXt"><p class="sc-jRhVzh bHjkXy">{{authService.totalContributions | currency}}</p><p class="sc-iHhHRJ ehTkUH">Total dollar amount</p></div><div class="sc-hcnlBt iHjEXt"><p class="sc-hkbPbT fBNYpD">{{authService.userContributions.length}}</p><p class="sc-iHhHRJ ehTkUH">Total Contributions</p></div></div>
+  </mat-card-header>
+
+  <app-contribution *ngFor="let contribution of authService.userContributions" [contribution]="contribution" @itemState></app-contribution>
+</mat-card>

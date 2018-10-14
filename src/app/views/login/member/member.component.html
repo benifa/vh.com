@@ -1,17 +1,16 @@
-<header id="home-header-member" [ngClass]="{'header-fixed': isFixed}">
-  <div class="container" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
-    <div class="header-mobile-top" fxLayoutAlign="start center">
-      <div class="home-logo mr-1" >
-        <img style="width:80px" src="assets/images/dark_logo_white_background.jpg" alt="Responsive image">
-      </div>
-      <div fxFlex fxLayoutAlign="end center"  id="menu-toggle">
-        <button mat-icon-button>
-          <mat-icon>account_circle</mat-icon>
-        </button>
-        <button mat-icon-button>
-          <mat-icon>keyboard_arrow_down</mat-icon>
-        </button>
-      </div>
-    </div>
-  </div>
-</header>
+<app-member-header></app-member-header>
+
+<div class="container" style="padding: 100px 20px  20px; height: 100%; background: whitesmoke">
+
+  <mat-card style="background: #00bfff; padding: 40px">
+    <mat-card-content style="text-align: center; color: white">
+     {{getGreeting()}} , {{authService.user.firstname}}
+    </mat-card-content>
+  </mat-card>
+
+  <app-contributions></app-contributions>
+
+
+</div>
+
+

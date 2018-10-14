@@ -1,0 +1,21 @@
+<header id="home-header-member" [ngClass]="{'header-fixed': isFixed}">
+  <div class="container" fxLayout="row" fxLayoutWrap="wrap" fxLayoutAlign="start center">
+    <div class="header-mobile-top" fxLayoutAlign="start center">
+      <div class="home-logo mr-1" >
+        <img style="width:80px" src="assets/images/dark_logo_white_background.jpg" alt="Responsive image">
+      </div>
+      <div fxFlex fxLayoutAlign="end center"  id="menu-toggle">
+        <button mat-icon-button>
+          <mat-icon style="font-size: 40px; color: #cccccc">account_circle</mat-icon>
+        </button>
+        <button mat-button   [matMenuTriggerFor]="menu" mat-icon-button>
+          <mat-icon >keyboard_arrow_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="authService.logout()" >Logout</button>
+          <button mat-menu-item>Manage members</button>
+        </mat-menu>
+      </div>
+    </div>
+  </div>
+</header>

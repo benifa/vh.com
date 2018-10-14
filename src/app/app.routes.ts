@@ -1,6 +1,6 @@
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
-import {AppLoaderComponent} from './services/app-loader/app-loader.component';
+import {RegisterMemberComponent} from './views/register-member/register-member.component';
 
 const appRoutes: Routes = [
   {
@@ -15,7 +15,9 @@ const appRoutes: Routes = [
   {
     path: 'login',
     loadChildren: './views/login/login.module#LoginModule'
-  }
+  },
+
+  {path: 'register', component: RegisterMemberComponent}
 ];
 
 @NgModule({

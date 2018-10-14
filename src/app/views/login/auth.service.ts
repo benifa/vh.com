@@ -5,14 +5,18 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {User} from '../../models/user.model';
 import {AppLoaderService} from '../../services/app-loader/app-loader.service';
+import {Contribution} from '../../models/contribution.model';
+
 
 @Injectable()
 export class AuthService {
-  BASE_URL = 'http://ec2-18-222-232-199.us-east-2.compute.amazonaws.com:80';
+  BASE_URL = 'https://api.fanya.io:444';
   clientId: string;
   token: String;
   refreshToken: String;
   user: User;
+  userContributions = [];
+  totalContributions = 0;
   isLoading: boolean;
 
   constructor(private http: Http, private router: Router, private route: ActivatedRoute, private loader: AppLoaderService) {
@@ -39,6 +43,7 @@ export class AuthService {
             this.refreshToken = body['refresh_token'];
             this.user = body['member'];
             this.router.navigate(['/login', this.user.firstname]);
+            this.getContributionsForMember()
           }
         },
         (error: Error) => {
@@ -46,8 +51,39 @@ export class AuthService {
          this.loader.close()
         }
       );
-
   }
+
+  register(firstname: String, lastname: String, phone: String, account: String,
+           email: string, password: string, date: String) {
+
+    this.isLoading = true;
+    this.loader.open('crating')
+    this.http.put(this.BASE_URL + '/member', {
+      'email' : email,
+      'password' : password,
+      'firstname' : firstname,
+      'lastname' : lastname,
+      'phone' : phone,
+      'account' : account,
+      'joining_date' : date
+    }, this.getHeaders())
+      .subscribe(
+        (response: Response) => {
+          this.loader.close()
+          if (response['ok']) {
+            this.isLoading = false;
+            this.router.navigate(['/login']);
+          }
+        },
+        (error: Error) => {
+          this.isLoading = false;
+          this.loader.close()
+        }
+      );
+  }
+
+
+
 
   getUserInformation() {
     // this.isLoading = true;
@@ -64,6 +100,30 @@ export class AuthService {
             this.isLoading = false;
             this.user = response.json();
           }
+        },
+        (error: Error) => {
+          this.isLoading = false;
+        }
+      );
+
+  }
+
+  getContributionsForMember() {
+    this.isLoading = true;
+    this.http.get(this.BASE_URL + '/contributions/' + this.user.id)
+      .map(
+        (response: Response) => {
+          const data = response.json();
+          this.userContributions = data['contributions']
+          this.totalContributions = 0
+          this.userContributions.forEach((e: Contribution) => {
+            this.totalContributions += e.amount;
+          });
+          return data;
+        })
+      .subscribe(
+        (response: Response) => {
+          this.isLoading = false;
         },
         (error: Error) => {
           this.isLoading = false;
@@ -160,6 +220,25 @@ export class AuthService {
         }
       });
   }
-
+//contributions
 
 }
+
+/*
+*  map(
+        (data: TaxFile[]) => {
+          this.isLoading = false;
+          this.loader.close()
+          this.taxeFilesReady = true;
+          this.links = data['files'];
+          this.router.navigate(['/home/download']);
+        }), catchError(error => {
+        this.isLoading = false;
+        this.loader.close()
+
+        return throwError('Something went wrong!');
+      })
+*
+*
+*
+* */

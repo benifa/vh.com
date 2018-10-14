@@ -1,12 +1,15 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { LoginRoutingModule } from './login-routing.module';
+import {LoginRoutingModule} from './login-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule, MatCardModule, MatChipsModule, MatIconModule, MatInputModule, MatMenuModule} from '@angular/material';
-import {LoginComponent} from './login.component';
-import { MemberComponent } from './member/member.component';
+import {LoginComponent} from './member-login/login.component';
+import {MemberComponent} from './member/member.component';
 import {WINDOW_PROVIDERS} from '../../helpers/window.helper';
+import {MemberHeaderComponent} from './member/member-header/member-header.component';
+import { ContributionsComponent } from './member/contributions/contributions.component';
+import { ContributionComponent } from './member/contributions/contribution/contribution.component';
 
 @NgModule({
   imports: [
@@ -23,7 +26,8 @@ import {WINDOW_PROVIDERS} from '../../helpers/window.helper';
     MatChipsModule,
     MatInputModule,
   ],
-  declarations: [LoginComponent, MemberComponent],
+  declarations: [LoginComponent, MemberComponent, MemberHeaderComponent, ContributionsComponent, ContributionComponent],
   providers: [WINDOW_PROVIDERS]
 })
-export class LoginModule { }
+export class LoginModule {
+}
